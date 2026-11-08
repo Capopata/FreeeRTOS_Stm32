@@ -14,7 +14,7 @@
         {
             "label": "Flash (OpenOCD)",
             "type": "shell",
-            "command": "openocd -s \"C:/Users/vlogk/Documents/Tool/openocd/xpack-openocd-0.12.0-7-win32-x64/xpack-openocd-0.12.0-7/openocd/scripts\" -f interface/stlink.cfg -f target/stm32f1x.cfg -c \"program build/Debug/FreeRTOS_TestComm.elf verify reset exit\"",
+            "command": "openocd -s \"C:/Users/vlogk/Documents/Tool/openocd/xpack-openocd-0.12.0-7-win32-x64/xpack-openocd-0.12.0-7/openocd/scripts\" -f flash.cfg",
             "dependsOn": "Build (CMake)",
             "problemMatcher": []
         }
