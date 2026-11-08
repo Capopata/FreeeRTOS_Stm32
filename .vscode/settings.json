@@ -4,6 +4,9 @@
     "C_Cpp.default.compileCommands": "${workspaceFolder}/build/Debug/compile_commands.json",
     "cortex-debug.openocdPath": "C:/Users/vlogk/Documents/Tool/openocd/xpack-openocd-0.12.0-7-win32-x64/xpack-openocd-0.12.0-7/bin/openocd.exe",
     "cortex-debug.armToolchainPath": "C:/Users/vlogk/Documents/Tool/arm_gnu_tool/arm-gnu-toolchain-15.3.rel2-mingw-w64-x86_64-arm-none-eabi/bin",
-    "cortex-debug.gdbPath": "C:/Users/vlogk/Documents/Tool/arm_gnu_tool/arm-gnu-toolchain-15.3.rel2-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gdb.exe"
+    "cortex-debug.gdbPath": "C:/Users/vlogk/Documents/Tool/arm_gnu_tool/arm-gnu-toolchain-15.3.rel2-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gdb.exe",
+    "terminal.integrated.env.windows": {
+        "PATH": "D:/QT/Tools/CMake_64/bin;${env:PATH}"
+    }
 }
 
