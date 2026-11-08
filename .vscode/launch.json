@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32 (OpenOCD)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/FreeRTOS_TestComm.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F103C8",
+            "runToEntryPoint": "main",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "searchDir": [
+                "C:/Users/vlogk/Documents/Tool/openocd/xpack-openocd-0.12.0-7-win32-x64/xpack-openocd-0.12.0-7/openocd/scripts"
+            ],
+            "serverpath": "C:/Users/vlogk/Documents/Tool/openocd/xpack-openocd-0.12.0-7-win32-x64/xpack-openocd-0.12.0-7/bin/openocd.exe",
+            "armToolchainPath": "C:/Users/vlogk/Documents/Tool/arm_gnu_tool/arm-gnu-toolchain-15.3.rel2-mingw-w64-x86_64-arm-none-eabi/bin",
+            "gdbPath": "C:/Users/vlogk/Documents/Tool/arm_gnu_tool/arm-gnu-toolchain-15.3.rel2-mingw-w64-x86_64-arm-none-eabi/bin/arm-none-eabi-gdb.exe",
+            "preLaunchTask": "Build (CMake)"
+        }
+    ]
+}
+

@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -243,7 +243,11 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+int __io_putchar(int ch)
+{
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+  return ch;
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -256,10 +260,18 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
+  uint32_t count = 0;
+  printf("\r\n=========================================\r\n");
+  printf("  STM32F103 FreeRTOS Comm Initialized!   \r\n");
+  printf("=========================================\r\n");
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    printf("[Heartbeat] count = %lu | tick = %lu ms\r\n", 
+           (unsigned long)count++, 
+           (unsigned long)osKernelGetTickCount());
+    osDelay(1000);
   }
   /* USER CODE END 5 */
 }
